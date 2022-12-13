@@ -48,6 +48,10 @@ const { crateApp } = Vue
             if (this.counter >= this.images.length){
                 this.counter = 0;
             }
+        },
+
+        setImg(index){
+            this.counter = index;
         }
 
     }
