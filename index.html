@@ -49,8 +49,8 @@
                 <div class="thumbs">
                     <div class="prev" @click="prev()"></div>
                     <div class="next" @click="next()"></div>
-                    <div class="thumb" :class="(counter == 0) ? 'active' : ''">
-                        <img :src="element.image" alt="IMAGE" v-for="(element, index) in images" @click="setImg(index)"/>
+                    <div class="thumb" v-for="(element, index) in images" :class="(counter == index) ? 'active' : ''" @click="setImg(index)">
+                        <img :src="element.image" alt="IMAGE"/>
                     </div>
                 </div>
 
