@@ -4,7 +4,8 @@ const { crateApp } = Vue
 .createApp({
     data(){
         return {
-            image : [
+            counter : 0,
+            images : [
                 {
                     image: 'img/01.webp',
                     title: 'Marvel\'s Spiderman Miles Morale',
@@ -32,5 +33,23 @@ const { crateApp } = Vue
                 },
             ]
         }
+    },
+
+    methods : {
+        prev(){
+            this.counter--;
+            if (this.counter < 0){
+                this.counter = this.images.length - 1;
+            }
+        },
+
+        next(){
+            this.counter++;
+            if (this.counter >= this.images.length){
+                this.counter = 0;
+            }
+        }
+
     }
+
 }).mount('#app');
