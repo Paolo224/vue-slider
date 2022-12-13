@@ -50,10 +50,8 @@ const { crateApp } = Vue
             }
         },
 
-        setImg(index){
-            this.counter = index;
+        setImg(currentIndex){
+            this.counter = currentIndex;
         }
-
     }
-
 }).mount('#app');
